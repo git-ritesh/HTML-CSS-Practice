@@ -1,0 +1,222 @@
+#landing-main::before {
+    content: '';
+    background: radial-gradient( circle at top left, rgb(225, 181, 235) 1%, rgba(253, 247, 243, 1) 20% );
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+/* Applies to Multiple Sections */
+.section-one__heading, .section-two__heading {
+    margin: 0;
+}
+
+.section-one__heading {
+    font-size: 3em;
+    line-height: 1.1;
+}
+
+.section-two__heading {
+    font-size: 2em;
+}
+
+.section-one__tablet-img, .section-two__img {
+    width: 100%;
+    max-width: 22rem;
+    align-self: center;
+}
+/* Applies to Multiple Sections */
+.section-one, .section-two, .section-two__container {
+    flex-direction: column;
+}
+
+.section-one, .section-two {
+    padding-block: 3rem;
+}
+
+.section-one__tablet-img {
+    padding-inline: .5rem;
+    margin-bottom: 2.5rem;
+}
+
+.section-one__container {
+    max-width: 40.5rem;
+}
+
+.section__cta {
+    margin-bottom: 1.5rem;
+}
+
+.section-two {
+    /* Applies full width background (equal to body width)  */
+    box-shadow: 0 0 0 100vmax #fff ;
+    clip-path: inset(0 -100vmax);
+    background: #fff;
+}
+
+.section-two__img {
+    margin: 2rem 0;
+}
+#phone-img.section-two__img {
+    padding: 1rem;
+}
+
+/* ==================== SIGN UP PAGE STYLES ==================== */
+p.sign-up {
+    margin: 0 0 2rem;
+}
+p.sign-up::before {
+    font-size: 1.5rem;
+    margin-right: .25rem;
+}
+
+#resources::before {
+    content: "🎈";
+}
+#deliver::before {
+    content: "🗞️";
+}
+#ideas::before {
+    content: "💡";
+}
+
+form {
+    padding: 2rem;
+    border-radius: .5rem;
+    margin-bottom: 2.5rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form > * {
+    margin: 0;
+}
+
+h2.sign-up, input, .terms-container {
+    margin-bottom: 1.5rem;
+}
+h2.sign-up {
+    font-size: 18.72px;
+}
+
+label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+label[for=terms] {
+    margin-bottom: 0;
+}
+
+input {
+    width: 100%;
+    padding: .75rem;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.terms-container {
+    align-items: baseline;
+}
+#terms {
+    width: initial;
+    margin-right: .5rem;
+    margin-top: 0;
+}
+.terms-link {
+    text-decoration: underline;
+    color: var(--purple);
+}
+
+button.cta {
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    background: var(--purple);
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+}
+/* FOR TABLET & SMALL SIZE LAPTOPS */
+@media (min-width: 48rem) {
+    /* =============== LANDING PAGE STYLES =============== */
+    .section-one__tablet-img {
+        padding-inline: 0;
+    }
+    .section-two__wrapper-txt {
+        max-width: 28rem;
+    }
+
+    .section-two__container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+    .section-two__container.row-rev {
+        flex-direction: row-reverse;
+    }
+
+    .section-two__img {
+        margin: 0;
+    }
+    #phone-img.section-two__img {
+        padding: 0;
+    }
+    inherit
+    .section-two {
+        gap: 4rem;
+    }
+    /* ================ SIGN UP PAGE STYLES ================ */
+    p.sign-up::before {
+        margin-right: .5rem;
+    }
+}
+
+@media (min-width: 64rem) {
+    .section-one, .section-two {
+        padding-block: 4rem;
+    }
+
+    .section-one {
+        flex-flow: row-reverse wrap;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .section-one__container {
+        width: 60%;
+    }
+
+    .section-one__tablet-img {
+        flex: 1;
+        min-width: 16rem;
+        max-width: 100%;
+        margin-left: -3rem;
+        padding-inline: 0;
+        margin-bottom: 0;
+    }
+
+    .section-two {
+        gap: 6rem;
+        margin-block: initial;
+    }
+
+    .section-two__container {
+        align-items: center;
+    }
+
+    .section-two__wrapper-txt {
+        max-width: 42rem;
+    }
+    
+    .section-two__heading {
+        max-width: 36rem;
+    }
+
+    .section-two__img {
+        max-width: 30rem;
+    }
+}

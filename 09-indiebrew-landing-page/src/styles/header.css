@@ -1,0 +1,89 @@
+header {
+    padding-top: 2.5rem;
+}
+.hamburger {
+    border: none;
+    background: none;
+    padding: none;
+}
+
+.hamburger__close-img {
+    display: none;
+}
+.hamburger__open-img {
+    transform: scale(1.2);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-width: max-content;
+    height: 100vh;
+    padding: 6rem 1rem;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    transition: transform .3s ease-in-out ;
+    transform: translateX(100%);
+}
+.navbar.is-active {
+    transform: translateX(0);
+}
+
+.hamburger.is-active > .hamburger__open-img {
+    display: none;
+}
+.hamburger.is-active > .hamburger__close-img {
+    display: block;
+    position: fixed;
+    z-index: 1;
+    top: 2.75rem;
+    right: 7%;
+    transform: scale(1.2);
+}
+
+.nav__list {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nav__links {
+    color: #000;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 48rem) {
+    .hamburger {
+        display: none;
+    }
+
+    .navbar {
+        position: unset;
+        backdrop-filter: unset;
+        height: auto;
+        padding: 0;
+        transform: none;
+    }
+    .nav__list {
+        margin: 0;
+        flex-direction: row;
+    }
+    .nav__links {
+        text-transform: initial;
+    }
+}
+
+@media (min-width: 64rem) {
+    header {
+        padding-top: 3rem;
+    }
+}
+
+/* =================== SIGN UP PAGE ===================  */
+#back-btn {
+    padding-inline: 14px;
+    border: 1px solid #cccc;
+    border-radius: .25rem;
+    align-self: stretch;
+}

@@ -1,0 +1,98 @@
+/* Import Fonts */
+@font-face {
+    font-family: "DM-Sans";
+    src: url(../fonts/DMSans-VariableFont_opsz\,wght.ttf);
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url(../fonts/static/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../fonts/static/Roboto-Regular.ttf);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* COLORS */
+  --purple: #7d00fb;
+  --gray: #505050;
+  --smoke-white: #fcfcf9;
+  --white: #fff;
+  --black: #000;
+}
+
+body {
+  margin: 0;
+  min-width: 20rem;
+  min-height: 100vh;
+  font-family: 'DM-Sans',serif;
+  position: relative;
+  /* optimizes text rendering speed but affects legibility  */
+  text-rendering: optimizeSpeed;
+}
+
+#body-sign-up {
+  background: #fae6f8;
+}
+
+header, main,  footer  {
+  width: min(86%, 90rem);
+  margin: auto;
+}
+
+main, footer {
+  font-size: clamp(1rem, 0.821rem + 0.895vw, 1.25rem);
+}
+
+img {
+  display:block;
+  max-width: 100%;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.clr-gray {
+    color: var(--gray);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Flexbox related general properties*/
+.flexbox {
+  display: flex;
+}
+.flw-wrap {
+  flex-wrap: wrap;
+}
+.jc-sb {
+  justify-content: space-between;
+}
+.ai-c {
+  align-items: center;
+}
+
+/* Call to Action in Navbar & Main Section */
+.cta {
+  display: inline-block;
+  background: var(--purple);
+  color: #fff;
+  padding: 1rem 1rem;
+  border-radius: .25rem;
+}
+
+.indiebrewers-count, .section-two__link {
+  color: var(--purple);
+}
+
+.bg-fff {
+  background: #fff;
+}
